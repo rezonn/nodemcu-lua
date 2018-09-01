@@ -79,7 +79,7 @@ wifi.ap.config({ssid="error",pwd="321321321"})
 Now you can coonect to nodemcu from macos
 * Select "error" in macos wifi
 * Set 321321321 as password
-## Make lua scrript
+## Make and upload lua script
 Copy this code
 ```
 -- create a server
@@ -88,14 +88,14 @@ sv=net.createServer(net.TCP, 30)
 sv:listen(80,function(c)
   c:on("receive", function(c, pl) print(pl) end)
   body = "hello world"
-  c:send(table.concat({
-    "HTTP/1.1 200 OK",
-    "Content-Type: text/plain",
-    "Connection: close",
-    "Content-length: " .. #body,
-    "",
-    body
-  }, "\r\n"));
+    c:send(table.concat({
+      "HTTP/1.1 200 OK",
+      "Content-Type: text/plain",
+      "Connection: close",
+      "Content-length: " .. #body,
+      "",
+      body
+    }, "\r\n"));
 end)
 ```
 Save on desktop as server.lua. 
