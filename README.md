@@ -1,4 +1,4 @@
-# nodemcu-without-arduino
+# NodeMCU without Arduino
 
 ## Hardware
 * MacOS
