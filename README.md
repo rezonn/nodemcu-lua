@@ -55,7 +55,7 @@ Saving session...
 ```
 ## Listen USB
 ```
-nodemcu-uploader --baud 9600 --port /dev/cu.wchusbserialfa130 terminal
+nodemcu-uploader --port /dev/cu.wchusbserialfa130 terminal
 ```
 You can see
 ```
