@@ -1,4 +1,4 @@
-# NodeMCU without Arduino
+# NodeMCU LUA
 
 ## Hardware, soft
 * MacOS
