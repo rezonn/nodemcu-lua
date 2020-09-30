@@ -44,6 +44,7 @@ net.createServer(net.TCP, 30):listen(80,function(c)
   end) 
 end)
 ```
+## Notes
 То turn on "d1" pin and turn off "d2" pin 
 ```
 http://192.168.1.4/?d1=0&d2=0
