@@ -5,12 +5,11 @@
 * wifi router
 * [NodeMCU](https://www.ebay.com/sch/i.html?_nkw=nodemcu)
 * Firmware (*.bin) from [nodemcu-build.com](https://nodemcu-build.com) to mail
-
-## Flash
 ```
 sudo pip install esptool
 pip install nodemcu-uploader
 ```
+## Flash
 Connect NodeMCU. 
 flash (replace port '/dev/cu.usbserial-1410' with your port *1)
 ```
