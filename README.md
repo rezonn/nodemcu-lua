@@ -10,7 +10,7 @@
 sudo pip install esptool
 pip install nodemcu-uploader
 ```
-Connect NodeMCU
+Connect NodeMCU. 
 View ports:
 ```
 ls /dev/
@@ -46,7 +46,7 @@ net.createServer(net.TCP, 30):listen(80,function(c)
 end)
 ```
 ## Notes
-То turn on "d1" pin and turn off "d2" pin 
+То turn on "d1" pin and turn off "d2" pin (replace nodemcu local ip 192.168.1.4)
 ```
 http://192.168.1.4/?d1=0&d2=0
 ```
