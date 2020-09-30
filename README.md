@@ -53,3 +53,14 @@ To view all files on nodemcu:
 ```
 nodemcu-uploader --port /dev/cu.wchusbserialfa130 file list
 ```
+Servo motor:
+```
+stp={2,1500,20000}
+gpio.mode(stp[1], gpio.OUTPUT)
+tmr.alarm(1,stp[3]/1000, tmr.ALARM_AUTO, function() 
+	gpio.write(stp[1],1) 
+	tmr.delay(stp[2]) 
+	gpio.write(stp[1],0)
+	end)
+tmr.start(1)
+```
