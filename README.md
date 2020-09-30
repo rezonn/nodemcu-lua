@@ -47,7 +47,7 @@ ls /dev/
 ```
 То turn on "d1" pin and turn off "d2" pin (replace nodemcu local ip 192.168.1.4)
 ```
-http://192.168.1.4/?d1=0&d2=0
+http://192.168.1.4/?d1=1&d2=0
 ```
 To view all files on nodemcu:
 ```
