@@ -1,10 +1,9 @@
 # NodeMCU LUA
-
 ## Hardware, soft
-* MacOS
 * wifi router
 * [NodeMCU](https://www.ebay.com/sch/i.html?_nkw=nodemcu)
 * Firmware (*.bin) from [nodemcu-build.com](https://nodemcu-build.com) to mail
+* MacOS
 ```
 sudo pip install esptool
 pip install nodemcu-uploader
