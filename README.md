@@ -10,6 +10,7 @@
 sudo pip install esptool
 pip install nodemcu-uploader
 ```
+Connect NodeMCU
 View ports:
 ```
 ls /dev/
