@@ -18,11 +18,9 @@ flash (replace port '/dev/cu.usbserial-1410' with your port)
 ```
 sudo esptool.py --port /dev/cu.usbserial-1410 erase_flash
 sudo esptool.py --port /dev/cu.usbserial-1410 write_flash --flash_size=detect 0 nodemcu.bin
-
 nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
-nodemcu-uploader -p /dev/cu.usbserial-1410 file list
 ```
-init.lua (replace wifissd, wifipas
+init.lua (replace wifissd, wifipas)
 ```
 conf={}
 conf.ssid="wifissd"
@@ -45,6 +43,10 @@ net.createServer(net.TCP, 30):listen(80,function(c)
     proc(url) c:send("HTTP/1.1 200 OK\nContent-Type: text/html\nConnection: close\nContent-length: "..#body.."\n\n" .. body)
   end) 
 end)
+```
+То turn on "d1" pin and turn off "d2" pin 
+```
+http://192.168.1.4/?d1=0&d2=0
 ```
 To view all files on nodemcu:
 ```
