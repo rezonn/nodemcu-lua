@@ -6,7 +6,7 @@
 * MacOS
 ```
 sudo pip install esptool
-pip install nodemcu-uploader
+sudo pip install nodemcu-uploader
 ```
 ## Flash
 Connect NodeMCU to Mac via usb.
