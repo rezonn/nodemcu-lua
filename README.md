@@ -9,14 +9,8 @@ sudo pip install esptool
 pip install nodemcu-uploader
 ```
 ## Flash
-Connect NodeMCU. 
-flash (replace port '/dev/cu.usbserial-1410' with your port *1)
-```
-sudo esptool.py --port /dev/cu.usbserial-1410 erase_flash
-sudo esptool.py --port /dev/cu.usbserial-1410 write_flash --flash_size=detect 0 nodemcu.bin
-nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
-```
-init.lua (replace wifissd, wifipas)
+Connect NodeMCU to Mac via usb.
+Create file "init.lua" (replace wifissd, wifipas)
 ```
 conf={}
 conf.ssid="wifissd"
@@ -39,6 +33,12 @@ net.createServer(net.TCP, 30):listen(80,function(c)
     proc(url) c:send("HTTP/1.1 200 OK\nContent-Type: text/html\nConnection: close\nContent-length: "..#body.."\n\n" .. body)
   end) 
 end)
+```
+Flash nodemcu (replace port '/dev/cu.usbserial-1410' with your port *1)
+```
+sudo esptool.py --port /dev/cu.usbserial-1410 erase_flash
+sudo esptool.py --port /dev/cu.usbserial-1410 write_flash --flash_size=detect 0 nodemcu.bin
+nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
 ```
 ## Notes
 *1 View ports:
