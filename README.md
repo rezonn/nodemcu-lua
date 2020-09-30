@@ -11,11 +11,7 @@ sudo pip install esptool
 pip install nodemcu-uploader
 ```
 Connect NodeMCU. 
-View ports:
-```
-ls /dev/
-```
-flash (replace port '/dev/cu.usbserial-1410' with your port)
+flash (replace port '/dev/cu.usbserial-1410' with your port *1)
 ```
 sudo esptool.py --port /dev/cu.usbserial-1410 erase_flash
 sudo esptool.py --port /dev/cu.usbserial-1410 write_flash --flash_size=detect 0 nodemcu.bin
@@ -46,6 +42,10 @@ net.createServer(net.TCP, 30):listen(80,function(c)
 end)
 ```
 ## Notes
+*1 View ports:
+```
+ls /dev/
+```
 То turn on "d1" pin and turn off "d2" pin (replace nodemcu local ip 192.168.1.4)
 ```
 http://192.168.1.4/?d1=0&d2=0
