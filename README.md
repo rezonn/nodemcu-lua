@@ -10,7 +10,7 @@ sudo pip install nodemcu-uploader
 ```
 ## Flash
 Connect NodeMCU to Mac via usb.
-Create file "init.lua" (replace wifissd, wifipas)
+Create file [init.lua](init.lua) (replace wifissd, wifipas)
 ```
 conf={}
 conf.ssid="wifissd"
