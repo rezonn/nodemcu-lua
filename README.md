@@ -43,4 +43,4 @@ tmr.alarm(1,stp[3]/1000, tmr.ALARM_AUTO, function()
 	end)
 tmr.start(1)
 ```
-NodeMCU (documentation)[https://nodemcu.readthedocs.io/en/release/modules/wifi]
+NodeMCU [documentation](https://nodemcu.readthedocs.io/en/release/modules/)
