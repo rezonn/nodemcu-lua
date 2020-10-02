@@ -30,7 +30,7 @@ http://192.168.1.4/?d1=1&d2=0
 ```
 *2 - To view all files on nodemcu:
 ```
-nodemcu-uploader --port /dev/cu.wchusbserialfa130 file list
+nodemcu-uploader --port /dev/cu.usbserial-1410 file list
 ```
 Servo motor:
 ```
