@@ -2,7 +2,7 @@
 ## Hardware, soft
 * wifi router
 * [NodeMCU](https://www.ebay.com/sch/i.html?_nkw=nodemcu)
-* Firmware (*.bin) from [nodemcu-build.com](https://nodemcu-build.com) to mail
+* Firmware (*.bin) from [nodemcu-build.com](https://nodemcu-build.com) to mail. Modules: file,gpio,http,mdns,net,node,pwm,pwm2,tmr,uart,websocket,wifi,tls
 * MacOS
 ```
 sudo pip install esptool
@@ -28,7 +28,7 @@ ls /dev/
 ```
 nodemcu-uploader --port /dev/cu.usbserial-1410 file list
 ```
-*5 - HTTP GET:
+*3 - HTTP GET:
 ```
 uri = "https://www.google.com/search?q=nodemcu"
 host = (uri.."/"):match("://(.-)/")
