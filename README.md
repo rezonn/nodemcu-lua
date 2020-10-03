@@ -15,7 +15,7 @@ Flash nodemcu (replace port "/dev/cu.usbserial-1410" with your port *1)
 sudo esptool.py --port /dev/cu.usbserial-1410 erase_flash
 sudo esptool.py --port /dev/cu.usbserial-1410 write_flash --flash_size=detect 0 nodemcu.bin
 ```
-Replace "wifissd", "wifipas" in [init.lua](init.lua) *3 and upload to nodemcu *2
+Replace "wifissd", "wifipas" in [init.lua](init.lua) (<540b) and upload to nodemcu *2
 ```
 nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
 ```
@@ -28,7 +28,6 @@ ls /dev/
 ```
 nodemcu-uploader --port /dev/cu.usbserial-1410 file list
 ```
-*3 - init.lua < 550b
 *4 - Servo motor:
 ```
 stp={2,1500,20000}
