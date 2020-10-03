@@ -28,6 +28,16 @@ ls /dev/
 ```
 nodemcu-uploader --port /dev/cu.usbserial-1410 file list
 ```
+*5 - HTTP GET:
+```
+uri = "https://www.google.com/search?q=nodemcu"
+host = (uri.."/"):match("://(.-)/")
+path = uri:match("://.-%f[/%z](/.*)")
+srv = tls.createConnection()
+srv:on("receive", function(sck, c) print(c:match("\r\n\r\n(.*)")) srv:close() end)
+srv:on("connection", function(sck, c) sck:send("GET "..path.." HTTP/1.1\nHost: "..host.."\n\n") end)
+srv:connect(443,host)
+```
 *4 - Servo motor:
 ```
 stp={2,1500,20000}
