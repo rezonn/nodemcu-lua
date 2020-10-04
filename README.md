@@ -19,6 +19,7 @@ Replace "wifissd", "wifipas" in [init.lua](init.lua) and upload to nodemcu *2
 ```
 nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
 ```
+Unplug and plug nodeMCU *5
 ## Notes
 *1 - View ports:
 ```
