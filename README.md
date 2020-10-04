@@ -2,7 +2,7 @@
 ## Hardware, soft
 * wifi router
 * [NodeMCU](https://www.ebay.com/sch/i.html?_nkw=nodemcu)
-* Firmware (*.bin) from [nodemcu-build.com](https://nodemcu-build.com) to mail. Modules: file,gpio,http,mdns,net,node,pwm,pwm2,tmr,uart,websocket,wifi,tls
+* Firmware (*.bin) from [nodemcu-build.com](https://nodemcu-build.com) to email. Modules: file,gpio,http,mdns,net,node,pwm,pwm2,tmr,uart,websocket,wifi,tls
 * MacOS
 ```
 sudo pip install esptool
@@ -15,7 +15,7 @@ Flash nodemcu (replace port "/dev/cu.usbserial-1410" with your port *1)
 sudo esptool.py --port /dev/cu.usbserial-1410 erase_flash
 sudo esptool.py --port /dev/cu.usbserial-1410 write_flash --flash_size=detect 0 nodemcu.bin
 ```
-Replace "wifissd", "wifipas" in [init.lua](init.lua) (<540b) and upload to nodemcu *2
+Replace "wifissd", "wifipas" in [init.lua](init.lua) and upload to nodemcu *2
 ```
 nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
 ```
@@ -24,7 +24,7 @@ nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
 ```
 ls /dev/
 ```
-*2 - To view all files on nodemcu:
+*2 - To view all files on nodemcu (make sure the file size on nodemcu is the same as on macos):
 ```
 nodemcu-uploader --port /dev/cu.usbserial-1410 file list
 ```
