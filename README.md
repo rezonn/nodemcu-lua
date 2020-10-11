@@ -9,8 +9,7 @@ sudo pip install esptool
 sudo pip install nodemcu-uploader
 ```
 ## Flash
-Connect NodeMCU to Mac via usb.
-Flash nodemcu (replace port "/dev/cu.usbserial-1410" with your port *1)
+Connect NodeMCU->USB->Mac. Flash nodemcu (replace port "/dev/cu.usbserial-1410" with your port *1)
 ```
 sudo esptool.py --port /dev/cu.usbserial-1410 erase_flash
 sudo esptool.py --port /dev/cu.usbserial-1410 write_flash --flash_size=detect 0 nodemcu.bin
