@@ -38,7 +38,7 @@ srv:on("receive", function(sck, c) print(c:match("\r\n\r\n(.*)")) srv:close() en
 srv:on("connection", function(sck, c) sck:send("GET "..path.." HTTP/1.1\nHost: "..host.."\n\n") end)
 srv:connect(443,host)
 ```
-*4 - Servo motor (replace 40 to 30...140 for [sg90](https://www.ebay.com/sch/i.html?_nkw=sg90) ):
+*4 - Servo motor (replace 40 to 30...140 for [sg90](https://www.ebay.com/sch/i.html?_nkw=sg90) - just connect it to G,3V,D4 pins):
 ```
 pin=4 pwm.setduty(pin, 40) tmr.delay(600000) pwm.stop(pin)
 ```
