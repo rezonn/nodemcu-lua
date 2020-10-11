@@ -40,7 +40,7 @@ srv:connect(443,host)
 ```
 *4 - Servo motor (replace 40 to 30...140 for [sg90](https://www.ebay.com/sch/i.html?_nkw=sg90) - just connect it to G,3V,D4 pins):
 ```
-pin=4 pwm.setduty(pin, 40) tmr.delay(600000) pwm.stop(pin)
+pin=4 pwm.setup(pin,50,0) pwm.setduty(pin, 40) tmr.delay(600000) pwm.stop(pin)
 ```
 *5 - То turn on "d1" pin and turn off "d2" pin (replace nodemcu local ip 192.168.1.4)
 ```
