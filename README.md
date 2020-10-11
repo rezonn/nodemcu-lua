@@ -21,7 +21,7 @@ nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
 ```
 Unplug and plug nodeMCU *5
 ## Notes
-*1 - View ports:
+*1 - View ports on MacOS:
 ```
 ls /dev/
 ```
