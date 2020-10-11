@@ -39,12 +39,9 @@ srv:on("receive", function(sck, c) print(c:match("\r\n\r\n(.*)")) srv:close() en
 srv:on("connection", function(sck, c) sck:send("GET "..path.." HTTP/1.1\nHost: "..host.."\n\n") end)
 srv:connect(443,host)
 ```
-*4 - Servo motor:
+*4 - Servo motor (replace 40 to 30...140 for [sg90](https://www.ebay.com/sch/i.html?_nkw=sg90) ):
 ```
-k=1500 pin=4 gpio.mode(pin, gpio.OUTPUT)
-m = tmr.create() m:register(20, tmr.ALARM_AUTO, function() gpio.write(pin,1) tmr.delay(k) gpio.write(pin,0) end)
-b = tmr.create() b:register(800, tmr.ALARM_SINGLE, function() m:unregister() b:unregister() end)
-m:start() b:start()
+pin=4 pwm.setduty(pin, 40) tmr.delay(600000) pwm.stop(pin)
 ```
 *5 - То turn on "d1" pin and turn off "d2" pin (replace nodemcu local ip 192.168.1.4)
 ```
