@@ -41,14 +41,10 @@ srv:connect(443,host)
 ```
 *4 - Servo motor:
 ```
-stp={2,1500,20000}
-gpio.mode(stp[1], gpio.OUTPUT)
-tmr.alarm(1,stp[3]/1000, tmr.ALARM_AUTO, function() 
-	gpio.write(stp[1],1) 
-	tmr.delay(stp[2]) 
-	gpio.write(stp[1],0)
-	end)
-tmr.start(1)
+k=1500 pin=4 gpio.mode(pin, gpio.OUTPUT)
+m = tmr.create() m:register(20, tmr.ALARM_AUTO, function() gpio.write(pin,1) tmr.delay(k) gpio.write(pin,0) end)
+b = tmr.create() b:register(800, tmr.ALARM_SINGLE, function() m:unregister() b:unregister() end)
+m:start() b:start()
 ```
 *5 - То turn on "d1" pin and turn off "d2" pin (replace nodemcu local ip 192.168.1.4)
 ```
