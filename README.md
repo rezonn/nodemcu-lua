@@ -30,6 +30,10 @@ tmr.create():alarm(5000, tmr.ALARM_SINGLE, function()
 print("hello world!")
 end)
 ```
+Eval
+```
+loadstring("print(15)"))()
+```
 *1 - View ports on MacOS:
 ```
 ls /dev/
