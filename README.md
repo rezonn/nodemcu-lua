@@ -38,7 +38,7 @@ ls /dev/
 ```
 nodemcu-uploader --port /dev/cu.usbserial-1410 file list
 ```
-*3 - HTTP GET:
+*3 - HTTP GET (Doesn't work at startup, needs a timer):
 ```
 uri = "https://www.google.com/search?q=nodemcu"
 host = (uri.."/"):match("://(.-)/")
