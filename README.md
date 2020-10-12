@@ -32,7 +32,7 @@ end)
 ```
 Eval
 ```
-loadstring("print(15)"))()
+loadstring("print(15)")()
 ```
 *1 - View ports on MacOS:
 ```
