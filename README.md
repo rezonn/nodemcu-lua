@@ -20,6 +20,10 @@ nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
 ```
 Unplug and plug nodeMCU *5
 ## Notes
+Deep sleep = shutdown + delay 5sec + start with init.lua. Connect RST and D0 pins
+```
+node.dsleep(5000000)
+```
 *1 - View ports on MacOS:
 ```
 ls /dev/
