@@ -14,7 +14,7 @@ Connect NodeMCU->USB->Mac. Flash nodemcu (replace port "/dev/cu.usbserial-1410" 
 sudo esptool.py --port /dev/cu.usbserial-1410 erase_flash
 sudo esptool.py --port /dev/cu.usbserial-1410 write_flash --flash_size=detect 0 nodemcu.bin
 ```
-Replace "wifissd", "wifipas" in [init.lua](init.lua) and upload to nodemcu *2
+Replace "wifissd", "wifipas" in [init.lua](init.lua) and upload to nodemcu *2 (init.lua run at every start)
 ```
 nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
 ```
@@ -23,6 +23,12 @@ Unplug and plug nodeMCU *5
 Deep sleep = shutdown + delay 5sec + start with init.lua. Connect RST and D0 pins
 ```
 node.dsleep(5000000)
+```
+Use timer 5 sec.
+```
+tmr.create():alarm(5000, tmr.ALARM_SINGLE, function()
+print("hello world!")
+end)
 ```
 *1 - View ports on MacOS:
 ```
