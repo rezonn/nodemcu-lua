@@ -19,7 +19,7 @@ Replace "wifissd", "wifipas" in [init.lua](init.lua) and upload to nodemcu *2 (i
 nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
 ```
 Unplug and plug nodeMCU *5
-## Notes
+## LUA tips
 Deep sleep = shutdown + delay 5sec + start with init.lua. Connect RST and D0 pins
 ```
 node.dsleep(5000000)
@@ -34,15 +34,7 @@ Eval
 ```
 loadstring("print(15)")()
 ```
-*1 - View ports on MacOS:
-```
-ls /dev/
-```
-*2 - To view all files on nodemcu (make sure the file size on nodemcu is the same as on macos):
-```
-nodemcu-uploader --port /dev/cu.usbserial-1410 file list
-```
-*3 - HTTP GET (Doesn't work at startup, needs a timer):
+HTTP GET (Doesn't work at startup, needs a timer):
 ```
 uri = "https://www.google.com/search?q=nodemcu"
 host = (uri.."/"):match("://(.-)/")
@@ -52,9 +44,18 @@ srv:on("receive", function(sck, c) print(c:match("\r\n\r\n(.*)")) srv:close() en
 srv:on("connection", function(sck, c) sck:send("GET "..path.." HTTP/1.1\nHost: "..host.."\n\n") end)
 srv:connect(443,host)
 ```
-*4 - [Servo](https://servodatabase.com/?sort=price) (replace 40 to 30...140 for [sg90](https://www.ebay.com/sch/i.html?_nkw=sg90) - just connect it to G,3V,D4 pins):
+[Servo](https://servodatabase.com/?sort=price) (replace 40 to 30...140 for [sg90](https://www.ebay.com/sch/i.html?_nkw=sg90) - just connect it to G,3V,D4 pins):
 ```
 pin=4 pwm.setup(pin,50,0) pwm.setduty(pin, 40) tmr.delay(600000) pwm.stop(pin)
+```
+## Notes
+*1 - View ports on MacOS:
+```
+ls /dev/
+```
+*2 - To view all files on nodemcu (make sure the file size on nodemcu is the same as on macos):
+```
+nodemcu-uploader --port /dev/cu.usbserial-1410 file list
 ```
 *5 - То turn on "d1" pin and turn off "d2" pin (replace nodemcu local ip 192.168.1.4)
 ```
