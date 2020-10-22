@@ -20,7 +20,7 @@ nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
 ```
 Unplug and plug nodeMCU *5
 ## LUA tips
-Deep sleep = shutdown + delay 5sec + start with init.lua. **Connect RST and D0 pins**
+Deep sleep = shutdown + delay 5sec + start with init.lua. **[Connect](https://www.ebay.com/sch/i.html?Jumper+Cable+Male+to+Male) RST and D0 pins**
 ```
 node.dsleep(5000000)
 ```
