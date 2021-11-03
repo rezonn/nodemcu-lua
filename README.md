@@ -1,5 +1,5 @@
 # NodeMCU LUA
-## Hardware, soft
+## Requirements
 * wifi router
 * [NodeMCU](https://www.ebay.com/sch/i.html?_nkw=nodemcu)
 * Firmware (*.bin) from [nodemcu-build.com](https://nodemcu-build.com) to email. Modules: file,gpio,http,mdns,net,node,pwm,pwm2,tmr,uart,websocket,wifi,tls
