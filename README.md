@@ -3,8 +3,9 @@
 * Download Firmware (*.bin) from [nodemcu-build.com](https://nodemcu-build.com) to email. Modules: file,gpio,http,mdns,net,node,pwm,pwm2,tmr,uart,websocket,wifi,tls
 * MacOS
 ```
-sudo pip install esptool
-sudo pip install nodemcu-uploader
+sudo pip3 install esptool
+sudo pip3 install nodemcu-uploader
+pip3 install --upgrade pyserial --user
 ```
 ## Flash
 Connect NodeMCU->USB->Mac. Flash nodemcu (replace port "/dev/cu.usbserial-1410" with your port *1)
