@@ -11,7 +11,7 @@ pip3 install --upgrade pyserial --user
 esptool.py --port /dev/cu.usbserial-1410 erase_flash
 esptool.py --port /dev/cu.usbserial-1410 write_flash --flash_size=detect 0 nodemcu.bin
 ```
-* Replace "wifissd", "wifipas" in [init.lua](init.lua) and upload to nodemcu *2 (init.lua run at every start)
+* Replace "wifissd", "wifipas" in [init.lua](init.lua) and upload to nodemcu *2
 ```
 nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
 nodemcu-uploader node restart
