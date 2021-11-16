@@ -1,5 +1,4 @@
 # [NodeMCU](https://www.ebay.com/sch/i.html?_nkw=nodemcu) LUA
-## Requirements
 * Install [CH340 driver](http://www.wch-ic.com/downloads/CH341SER_EXE.html)
 * Receive Firmware (*.bin) from [nodemcu-build.com](https://nodemcu-build.com) to email. Modules: file,gpio,http,mdns,net,node,pwm,pwm2,tmr,uart,websocket,wifi,tls
 * MacOS
@@ -8,17 +7,16 @@ sudo pip3 install esptool
 sudo pip3 install nodemcu-uploader
 pip3 install --upgrade pyserial --user
 ```
-## Flash
-Connect NodeMCU->USB->Mac. Flash nodemcu (replace port "/dev/cu.usbserial-1410" with your port *1)
+* Connect NodeMCU->USB->Mac. Flash nodemcu (replace port "/dev/cu.usbserial-1410" with your port *1)
 ```
 sudo esptool.py --port /dev/cu.usbserial-1410 erase_flash
 sudo esptool.py --port /dev/cu.usbserial-1410 write_flash --flash_size=detect 0 nodemcu.bin
 ```
-Replace "wifissd", "wifipas" in [init.lua](init.lua) and upload to nodemcu *2 (init.lua run at every start)
+* Replace "wifissd", "wifipas" in [init.lua](init.lua) and upload to nodemcu *2 (init.lua run at every start)
 ```
 nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
+nodemcu-uploader node restart
 ```
-Unplug and plug nodeMCU *5
 ## LUA tips
 Deep sleep = shutdown + delay 5sec + start with init.lua. **[Connect](https://www.ebay.com/sch/i.html?_nkw=Breadboard+Jumper+Cable+Male+to+Male) RST and D0 pins**
 ```
