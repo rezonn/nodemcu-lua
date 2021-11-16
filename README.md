@@ -1,7 +1,7 @@
 # [NodeMCU](https://www.ebay.com/sch/i.html?_nkw=nodemcu) LUA
 ## Requirements
 * Install [CH340 driver](http://www.wch-ic.com/downloads/CH341SER_EXE.html)
-* Download Firmware (*.bin) from [nodemcu-build.com](https://nodemcu-build.com) to email. Modules: file,gpio,http,mdns,net,node,pwm,pwm2,tmr,uart,websocket,wifi,tls
+* Receive Firmware (*.bin) from [nodemcu-build.com](https://nodemcu-build.com) to email. Modules: file,gpio,http,mdns,net,node,pwm,pwm2,tmr,uart,websocket,wifi,tls
 * MacOS
 ```
 sudo pip3 install esptool
