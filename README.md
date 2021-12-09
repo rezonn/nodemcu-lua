@@ -59,10 +59,13 @@ nodemcu-uploader --port /dev/cu.usbserial-1410 file list
 http://192.168.1.4/?d1=1&d2=0
 ```
 *6 - NodeMCU [documentation](https://nodemcu.readthedocs.io/en/release/lua-modules/README/)
-## Sublime
-build
+*7 Sublime build
 ```
 {
 	"shell_cmd": "nodemcu-uploader --port /dev/cu.usbserial-1410 upload $file_name && nodemcu-uploader --port /dev/cu.usbserial-1410 file do $file_name"
 }
+```
+*8 get all modules
+```
+function printtable() for k in pairs(getmetatable(_G)['__index']) do print(k) end end printtable()
 ```
