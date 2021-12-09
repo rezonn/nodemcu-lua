@@ -63,6 +63,6 @@ http://192.168.1.4/?d1=1&d2=0
 build
 ```
 {
-	"shell_cmd": "nodemcu-uploader --port /dev/cu.usbserial-1410 upload $file && nodemcu-uploader --port /dev/cu.usbserial-1410 file do $file_name"
+	"shell_cmd": "nodemcu-uploader --port /dev/cu.usbserial-1410 upload $file_name && nodemcu-uploader --port /dev/cu.usbserial-1410 file do $file_name"
 }
 ```
