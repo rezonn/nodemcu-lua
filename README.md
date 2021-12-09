@@ -59,3 +59,10 @@ nodemcu-uploader --port /dev/cu.usbserial-1410 file list
 http://192.168.1.4/?d1=1&d2=0
 ```
 *6 - NodeMCU [documentation](https://nodemcu.readthedocs.io/en/release/lua-modules/README/)
+## Sublime
+build
+```
+{
+	"shell_cmd": "nodemcu-uploader --port /dev/cu.usbserial-1410 upload $file && nodemcu-uploader --port /dev/cu.usbserial-1410 file do $file_name"
+}
+```
