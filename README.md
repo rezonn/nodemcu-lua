@@ -18,7 +18,7 @@ nodemcu-uploader node restart
 ```
 * Try blink "d4" pin 100 times at 10Hz
 ```
-http://big/?hz=10&d4=100s
+http://nodemcu/?hz=10&d4=100s
 ```
 ## LUA tips
 Deep sleep = shutdown + delay 5sec + start with init.lua. **[Connect](https://www.ebay.com/sch/i.html?_nkw=Breadboard+Jumper+Cable+Male+to+Male) RST and D0 pins**
