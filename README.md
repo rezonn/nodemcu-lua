@@ -1,4 +1,4 @@
-# [NodeMCU](https://www.ebay.com/sch/i.html?_nkw=nodemcu) LUA
+# [NodeMCU](https://www.ebay.com/sch/i.html?_nkw=nodemcu) [LUA](https://nodemcu.readthedocs.io/)
 * Install [CH340 driver](http://www.wch-ic.com/downloads/CH341SER_EXE.html)
 * Receive Firmware (*.bin) from [nodemcu-build.com](https://nodemcu-build.com) to email. Modules: file,gpio,http,mdns,net,node,pwm,pwm2,tmr,uart,websocket,wifi,tls
 ```
@@ -45,8 +45,6 @@ srv:connect(443,host)
 ```
 pin=4 pwm.setup(pin,50,0) pwm.setduty(pin, 40) tmr.delay(600000) pwm.stop(pin)
 ```
-NodeMCU [documentation](https://nodemcu.readthedocs.io/en/release/lua-modules/README/)
-
 Sublime: Tools -> Build system -> New build system
 ```
 {
