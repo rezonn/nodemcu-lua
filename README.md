@@ -20,6 +20,12 @@ nodemcu-uploader node restart
 ```
 http://nodemcu/?hz=10&d4=100s
 ```
+* Use [Sublime](https://www.sublimetext.com/download): Tools -> Build system -> New build system
+```
+{
+	"shell_cmd": "nodemcu-uploader --port /dev/cu.usbserial-1410 upload $file_name && nodemcu-uploader --port /dev/cu.usbserial-1410 file do $file_name"
+}
+```
 ## LUA tips
 Deep sleep = shutdown + delay 5sec + start with init.lua. **[Connect](https://www.ebay.com/sch/i.html?_nkw=Breadboard+Jumper+Cable+Male+to+Male) RST and D0 pins**
 ```
@@ -48,12 +54,6 @@ srv:connect(443,host)
 [Servo](https://servodatabase.com/?sort=price) (replace 40 to 30...140 for [sg90](https://www.ebay.com/sch/i.html?_nkw=sg90) - just connect it to G,3V,D4 pins):
 ```
 pin=4 pwm.setup(pin,50,0) pwm.setduty(pin, 40) tmr.delay(600000) pwm.stop(pin)
-```
-Sublime: Tools -> Build system -> New build system
-```
-{
-	"shell_cmd": "nodemcu-uploader --port /dev/cu.usbserial-1410 upload $file_name && nodemcu-uploader --port /dev/cu.usbserial-1410 file do $file_name"
-}
 ```
 ## Notes
 *1 - View ports on MacOS:
