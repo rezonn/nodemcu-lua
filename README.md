@@ -47,7 +47,7 @@ pin=4 pwm.setup(pin,50,0) pwm.setduty(pin, 40) tmr.delay(600000) pwm.stop(pin)
 ```
 NodeMCU [documentation](https://nodemcu.readthedocs.io/en/release/lua-modules/README/)
 
-Sublime build
+Sublime: Tools -> Build system -> New build system
 ```
 {
 	"shell_cmd": "nodemcu-uploader --port /dev/cu.usbserial-1410 upload $file_name && nodemcu-uploader --port /dev/cu.usbserial-1410 file do $file_name"
