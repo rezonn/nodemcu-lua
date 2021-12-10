@@ -11,10 +11,14 @@ pip3 install --upgrade pyserial --user
 esptool.py --port /dev/cu.usbserial-1410 erase_flash
 esptool.py --port /dev/cu.usbserial-1410 write_flash --flash_size=detect 0 nodemcu.bin
 ```
-* Replace "wifissd", "wifipas" in [init.lua](init.lua) and upload to nodemcu *2
+* Replace "wifissd", "wifipas" in [init.lua](init.lua) and upload to nodemcu
 ```
 nodemcu-uploader -p /dev/cu.usbserial-1410 upload init.lua
 nodemcu-uploader node restart
+```
+* Try blink "d4" pin 100 times at 10Hz
+```
+http://big/?hz=10&d4=100s
 ```
 ## LUA tips
 Deep sleep = shutdown + delay 5sec + start with init.lua. **[Connect](https://www.ebay.com/sch/i.html?_nkw=Breadboard+Jumper+Cable+Male+to+Male) RST and D0 pins**
@@ -59,8 +63,4 @@ ls /dev/
 *2 - file list
 ```
 nodemcu-uploader --port /dev/cu.usbserial-1410 file list
-```
-*5 - То turn on "d1" pin and turn off "d2" pin (replace nodemcu local ip 192.168.1.4)
-```
-http://nodemcu/?d1=1&d2=0
 ```
