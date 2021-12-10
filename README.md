@@ -50,7 +50,7 @@ pin=4 pwm.setup(pin,50,0) pwm.setduty(pin, 40) tmr.delay(600000) pwm.stop(pin)
 ```
 ls /dev/
 ```
-*2 - To view all files on nodemcu (make sure the file size on nodemcu is the same as on macos):
+*2 - file list
 ```
 nodemcu-uploader --port /dev/cu.usbserial-1410 file list
 ```
@@ -59,13 +59,13 @@ nodemcu-uploader --port /dev/cu.usbserial-1410 file list
 http://192.168.1.4/?d1=1&d2=0
 ```
 *6 - NodeMCU [documentation](https://nodemcu.readthedocs.io/en/release/lua-modules/README/)
-*7 Sublime build
+*7 - Sublime build
 ```
 {
 	"shell_cmd": "nodemcu-uploader --port /dev/cu.usbserial-1410 upload $file_name && nodemcu-uploader --port /dev/cu.usbserial-1410 file do $file_name"
 }
 ```
-*8 get all modules
+*8 - get all modules
 ```
 function printtable() for k in pairs(getmetatable(_G)['__index']) do print(k) end end printtable()
 ```
