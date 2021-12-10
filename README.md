@@ -45,6 +45,14 @@ srv:connect(443,host)
 ```
 pin=4 pwm.setup(pin,50,0) pwm.setduty(pin, 40) tmr.delay(600000) pwm.stop(pin)
 ```
+NodeMCU [documentation](https://nodemcu.readthedocs.io/en/release/lua-modules/README/)
+
+Sublime build
+```
+{
+	"shell_cmd": "nodemcu-uploader --port /dev/cu.usbserial-1410 upload $file_name && nodemcu-uploader --port /dev/cu.usbserial-1410 file do $file_name"
+}
+```
 ## Notes
 *1 - View ports on MacOS:
 ```
@@ -57,12 +65,4 @@ nodemcu-uploader --port /dev/cu.usbserial-1410 file list
 *5 - То turn on "d1" pin and turn off "d2" pin (replace nodemcu local ip 192.168.1.4)
 ```
 http://192.168.1.4/?d1=1&d2=0
-```
-*6 - NodeMCU [documentation](https://nodemcu.readthedocs.io/en/release/lua-modules/README/)
-
-*7 - Sublime build
-```
-{
-	"shell_cmd": "nodemcu-uploader --port /dev/cu.usbserial-1410 upload $file_name && nodemcu-uploader --port /dev/cu.usbserial-1410 file do $file_name"
-}
 ```
