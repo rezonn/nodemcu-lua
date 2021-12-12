@@ -27,6 +27,7 @@ http://nodemcu/?hz=10&d4=100s
 	"shell_cmd": "nodemcu-uploader --port /dev/cu.usbserial-1410 upload $file_name && nodemcu-uploader --port /dev/cu.usbserial-1410 file do $file_name"
 }
 ```
+[more](https://www.electronicwings.com/nodemcu/stepper-motor-interfacing-with-nodemcu)
 ## LUA tips
 Deep sleep = shutdown + delay 5sec + start with init.lua. **[Connect](https://www.ebay.com/sch/i.html?_nkw=Breadboard+Jumper+Cable+Male+to+Male) RST and D0 pins**
 ```
